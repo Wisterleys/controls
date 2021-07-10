@@ -1,5 +1,8 @@
 $(".btn-control").forEach(btn => {
-    btn.on("click",e=>{
-        console.log(e.target.getStyle("background-color"))
+    btn.on("touchstart mousedown",e=>{
+        $("#draw").innerText+=e.target.id
+    })
+    btn.on("touchend mouseup",e=>{
+        $("#draw").innerText+=e.target.id+" -"
     })
 });
